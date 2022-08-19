@@ -20,18 +20,16 @@ const Post = ({ postData }: PostProps) => {
         <a>
           <div className="go-home">
             <Image src={Home} alt="home" />
-            <span>Tech-Blog</span>
           </div>
         </a>
       </Link>
       <section>
         <div className="title">{postData.title}</div>
-        <div className="date">{postData.date}</div>
-        <a href={`https://github.com/${postData.name}`}>
-          <div className="name">{postData.name}</div>
-        </a>
-        <hr />
+        <div className="date">
+          {postData.date} — {postData.tag}
+        </div>
         <br />
+        <hr />
         <br />
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml ?? '' }} />
       </section>
@@ -66,27 +64,60 @@ export const getStaticProps = async ({ params }: { params: { id: string } }) => 
 };
 
 const style = `
+  section {
+    padding-bottom: 200px;
+  }
   .go-home {
     display: flex;
     align-items: center;
     margin: 40px 0;
   }
-  .go-home span {
-    margin-left: 8px;
-    color: #4048E2;
-    line-height: 26px;
-    font-weight: bold;
-  }
   .title {
-    font-weight: bold;
-    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 4rem;
     margin-bottom: 8px;
+    color: #fff;
   }
-  .name {
-    color: #ddd;
-    margin-top: 8px;
+  .date {
+    font-size: 1.25rem;
+    color: #7f8ea3;
   }
-  .name:hover {
-    text-decoration: underline;
+  h2 {
+    margin-top: 50px;
+  }
+  h3 {
+    margin-top: 35px;
+  }
+  ul {
+    padding-left: 24px;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  blockquote {
+    position: relative;
+    margin: 0;
+    margin-left: 20px;
+    padding-left: 10px;
+  }
+  blockquote:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 3px;
+    height: 100%;
+    background: #ddd;
+    left: 0;
+    top: 0;
+  }
+  pre {
+    padding: 34px;
+    background: rgb(1, 22, 39);
+  }
+  code {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 14px;
+    color: rgb(214, 222, 235);
   }
 `;

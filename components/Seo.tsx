@@ -7,7 +7,7 @@ interface SeoProps {
 export default function Seo({ title }: SeoProps) {
   return (
     <Head>
-      <title>tech-vlog | {title}</title>
+      <title>Sua Blog | {title}</title>
     </Head>
   );
 }

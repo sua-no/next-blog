@@ -1,0 +1,58 @@
+@import "./font.scss";
+@import "./reset.scss";
+
+* {
+  color: $text-color;
+}
+
+main {
+  background: $bg-color;
+  min-height: 100vh;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 960px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  margin-top: 50px;
+}
+h3 {
+  margin-top: 35px;
+}
+ul {
+  padding-left: 24px;
+}
+li {
+  margin-bottom: 10px;
+}
+blockquote {
+  position: relative;
+  margin: 0;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+blockquote:after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 3px;
+  height: 100%;
+  background: #ddd;
+  left: 0;
+  top: 0;
+}
+pre {
+  padding: 34px;
+  background: rgb(1, 22, 39);
+}
+code {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  color: rgb(214, 222, 235);
+}

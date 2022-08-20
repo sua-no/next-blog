@@ -1,11 +1,9 @@
-import type { GetStaticProps, NextPage, InferGetStaticPropsType } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { List } from '../components/List';
-import Seo from '../components/Seo';
-import { getSortedPostsData } from '../lib/post';
-import Logo from '../public/image/logo.png';
-import { PostType } from '../types';
+import type { GetStaticProps } from "next";
+import Link from "next/link";
+import { getSortedPostsData } from "../lib/post";
+import { PostType } from "../types";
+import styles from "../styles/Home.module.scss";
+import { List, Seo } from "../components";
 
 interface HomeProps {
   allPostsData: Array<PostType>;
@@ -15,14 +13,15 @@ const Home = ({ allPostsData }: HomeProps) => {
   return (
     <>
       <Seo title="Home" />
-      <style jsx>{style}</style>
       <div>
-        <Link href={'/'}>
+        <Link href={"/"}>
           <a>
-            <h1 className="logo">{/* <Image src={Logo} alt="logo" /> */}</h1>
+            <h1 className={styles.logo}>
+              {/* <Image src={Logo} alt="logo" /> */}
+            </h1>
           </a>
         </Link>
-        <section>
+        <section className={styles.section}>
           <ul>
             {allPostsData.map((e) => {
               return <List key={e.id} {...e} />;
@@ -44,12 +43,3 @@ export const getStaticProps: GetStaticProps = () => {
     },
   };
 };
-
-const style = `
-  .logo {
-    text-align: center;
-  }
-  section {
-    margin-top: 40px;
-  }
-  `;

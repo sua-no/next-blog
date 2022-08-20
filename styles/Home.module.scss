@@ -1,6 +1,23 @@
 .logo {
   text-align: center;
 }
-.section {
-  margin-top: 40px;
+.posts {
+  margin-top: 100px;
+  > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include borderBottom();
+    h2 {
+      font-weight: 400;
+      margin: 0;
+    }
+    a {
+      color: $text-second-color;
+      font-size: 1.2rem;
+    }
+  }
+  ul {
+    margin-top: 40px;
+  }
 }

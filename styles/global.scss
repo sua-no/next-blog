@@ -8,6 +8,7 @@
 main {
   background: $bg-color;
   min-height: 100vh;
+  padding: 0 24px;
 }
 
 .wrapper {
@@ -20,9 +21,10 @@ main {
 }
 
 a {
-  transition: 0.3s linear;
+  font-weight: 200;
+  @include transition();
   &:hover {
-    opacity: 0.8;
+    color: $title-color;
     text-decoration: underline;
   }
 }

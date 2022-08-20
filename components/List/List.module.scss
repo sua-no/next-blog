@@ -1,0 +1,13 @@
+.root {
+  margin-bottom: 16px;
+  a {
+    div:first-child {
+      font-size: 1.4rem;
+      font-weight: 400;
+      margin-bottom: 4px;
+    }
+    div:last-child {
+      color: $text-second-color;
+    }
+  }
+}

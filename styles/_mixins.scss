@@ -1,0 +1,7 @@
+@mixin borderBottom() {
+  padding-bottom: 8px;
+  border-bottom: 1px solid $border-color;
+}
+@mixin transition() {
+  transition: 0.2s linear;
+}

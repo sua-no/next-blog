@@ -3,7 +3,7 @@ import styles from "./Comments.module.scss";
 const Comments = () => {
   return (
     <section
-      className={styles.section}
+      className={styles.root}
       ref={(elem) => {
         if (!elem) {
           return;
@@ -15,7 +15,7 @@ const Comments = () => {
         scriptElem.setAttribute("repo", "sua-no/next-blog");
         scriptElem.setAttribute("issue-term", "pathname");
         scriptElem.setAttribute("label", "blog-comment");
-        scriptElem.setAttribute("theme", "photon-dark");
+        scriptElem.setAttribute("theme", "dark-blue");
         elem.appendChild(scriptElem);
       }}
     />

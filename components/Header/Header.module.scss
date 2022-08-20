@@ -1,17 +1,42 @@
-.header {
+.root {
   margin: 0 auto;
   max-width: 960px;
   padding: 36px 0;
-  > a:hover {
-    opacity: 1;
-    text-decoration: none;
+  > a {
+    &:hover {
+      opacity: 1;
+      text-decoration: none;
+    }
   }
   h1 {
     margin: 0;
     display: inline-block;
+    color: $title-color;
+    font-weight: 400;
+  }
+  .links {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include borderBottom();
   }
   nav {
-    margin-top: 24px;
+    ul {
+      display: flex;
+      li {
+        margin-right: 20px;
+        a {
+          color: $text-second-color;
+          font-size: 1.2rem;
+        }
+        &.active {
+          a {
+            color: $title-color;
+          }
+        }
+      }
+    }
     a {
       font-size: 1.4rem;
     }

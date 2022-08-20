@@ -1,7 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
-
-import Home from "../../public/image/home.svg";
 import { PostType } from "../../types";
 import { getAllPostIds, getPostData } from "../../lib/post";
 import { Content, Seo } from "../../components";
@@ -14,13 +10,6 @@ const Post = ({ postData }: PostProps) => {
   return (
     <>
       <Seo title={postData.title ?? ""} />
-      <Link href="/">
-        <a>
-          <div>
-            <Image src={Home} alt="home" />
-          </div>
-        </a>
-      </Link>
       <Content {...postData} />
     </>
   );

@@ -23,14 +23,14 @@ export const getSortedPostsData = (main = true) => {
     };
   });
   const sortedData = allPostsData.sort((a, b) => {
-    if (a.id && b.id && a.id < b.id) {
+    if (+a.id && +b.id && +a.id < +b.id) {
       return 1;
     } else {
       return -1;
     }
   });
 
-  return main ? sortedData.slice(0, 3) : sortedData;
+  return main ? sortedData.slice(0, 5) : sortedData;
 };
 
 export const getAllPostIds = () => {

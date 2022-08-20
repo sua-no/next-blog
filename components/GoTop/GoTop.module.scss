@@ -10,6 +10,9 @@
   height: 32px;
   cursor: pointer;
   @include transition();
+  @media screen and (max-width: 960px) {
+    right: 24px;
+  }
 }
 .progressBar {
   stroke: url(#grad);

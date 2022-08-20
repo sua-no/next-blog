@@ -1,29 +1,24 @@
 import type { GetStaticProps } from "next";
-import Link from "next/link";
 import { getSortedPostsData } from "../lib/post";
 import { PostType } from "../types";
 import styles from "../styles/Home.module.scss";
-import { List, Seo } from "../components";
+import { About, List, Seo } from "../components";
 
 interface HomeProps {
-  allPostsData: Array<PostType>;
+  homePostData: Array<PostType>;
 }
 
-const Home = ({ allPostsData }: HomeProps) => {
+const Home = ({ homePostData }: HomeProps) => {
   return (
     <>
       <Seo title="Home" />
       <div>
-        <Link href={"/"}>
-          <a>
-            <h1 className={styles.logo}>
-              {/* <Image src={Logo} alt="logo" /> */}
-            </h1>
-          </a>
-        </Link>
         <section className={styles.section}>
+          <About />
+          <hr />
+          <div>Last Posts</div>
           <ul>
-            {allPostsData.map((e) => {
+            {homePostData.map((e) => {
               return <List key={e.id} {...e} />;
             })}
           </ul>
@@ -36,10 +31,10 @@ const Home = ({ allPostsData }: HomeProps) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps = () => {
-  const allPostsData = getSortedPostsData();
+  const homePostData = getSortedPostsData();
   return {
     props: {
-      allPostsData,
+      homePostData,
     },
   };
 };

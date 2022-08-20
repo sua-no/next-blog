@@ -7,7 +7,7 @@ interface SeoProps {
 export const Seo = ({ title }: SeoProps) => {
   return (
     <Head>
-      <title>Sua Blog | {title}</title>
+      <title>SUA Blog | {title}</title>
     </Head>
   );
 };

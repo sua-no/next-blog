@@ -1,4 +1,5 @@
 import { PostType } from "../../types";
+import Comments from "../Comments";
 import styles from "./Content.module.scss";
 
 export const Content = ({ ...props }: PostType) => {
@@ -12,6 +13,7 @@ export const Content = ({ ...props }: PostType) => {
       <hr />
       <br />
       <div dangerouslySetInnerHTML={{ __html: props.contentHtml ?? "" }} />
+      <Comments />
     </section>
   );
 };

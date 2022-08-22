@@ -39,7 +39,7 @@
   blockquote:after {
     position: absolute;
     display: block;
-    content: "";
+    content: '';
     width: 3px;
     height: 100%;
     background: $border-color;
@@ -51,9 +51,10 @@
     background: rgb(1, 22, 39);
   }
   code {
-    font-family: "Source Code Pro", monospace;
+    font-family: 'Source Code Pro', monospace;
     font-size: 14px;
     color: rgb(214, 222, 235);
+    white-space: pre-wrap;
   }
   img {
     max-width: 80%;

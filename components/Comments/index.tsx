@@ -1,4 +1,4 @@
-import styles from "./Comments.module.scss";
+import styles from './Comments.module.scss';
 
 const Comments = () => {
   return (
@@ -8,14 +8,14 @@ const Comments = () => {
         if (!elem) {
           return;
         }
-        const scriptElem = document.createElement("script");
-        scriptElem.src = "https://utteranc.es/client.js";
+        const scriptElem = document.createElement('script');
+        scriptElem.src = 'https://utteranc.es/client.js';
         scriptElem.async = true;
-        scriptElem.crossOrigin = "anonymous";
-        scriptElem.setAttribute("repo", "sua-no/next-blog");
-        scriptElem.setAttribute("issue-term", "pathname");
-        scriptElem.setAttribute("label", "blog-comment");
-        scriptElem.setAttribute("theme", "dark-blue");
+        scriptElem.crossOrigin = 'anonymous';
+        scriptElem.setAttribute('repo', 'sua-no/next-blog');
+        scriptElem.setAttribute('issue-term', 'pathname');
+        scriptElem.setAttribute('label', 'blog-comment');
+        scriptElem.setAttribute('theme', 'dark-blue');
         elem.appendChild(scriptElem);
       }}
     />

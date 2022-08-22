@@ -1,8 +1,8 @@
-import { useScroll } from "../../hooks/useScroll";
-import styles from "./GoTop.module.scss";
-import Top from "../../public/svg/arrow.svg";
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useScroll } from '../../hooks/useScroll';
+import styles from './GoTop.module.scss';
+import Top from '../../public/svg/arrow.svg';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 export const GoTop = () => {
   const scroll = useScroll();
@@ -22,14 +22,14 @@ export const GoTop = () => {
   }, [scroll]);
 
   const handleScrollTop = () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   };
   return (
     <div
       className={styles.root}
       onClick={handleScrollTop}
       style={{
-        visibility: scroll > 0 ? "visible" : "hidden",
+        visibility: scroll > 0 ? 'visible' : 'hidden',
         opacity: scroll > 0 ? 1 : 0,
       }}
     >

@@ -1,6 +1,6 @@
-import { PostType } from "../../types";
-import { getAllPostIds, getPostData } from "../../lib/post";
-import { Content, Seo } from "../../components";
+import { PostType } from '../../types';
+import { getAllPostIds, getPostData } from '../../lib/post';
+import { Content, Seo } from '../../components';
 
 interface PostProps {
   postData: PostType;
@@ -9,7 +9,7 @@ interface PostProps {
 const Post = ({ postData }: PostProps) => {
   return (
     <>
-      <Seo title={postData.title ?? ""} />
+      <Seo title={postData.title ?? ''} />
       <Content {...postData} />
     </>
   );

@@ -1,6 +1,6 @@
-import Link from "next/link";
-import { PostType } from "../../types";
-import styles from "./List.module.scss";
+import Link from 'next/link';
+import { PostType } from '../../types';
+import styles from './List.module.scss';
 
 export const List = ({ id, date, title, tag }: PostType) => {
   return (

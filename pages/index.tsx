@@ -1,9 +1,9 @@
-import type { GetStaticProps } from "next";
-import { getSortedPostsData } from "../lib/post";
-import { PostType } from "../types";
-import styles from "../styles/Home.module.scss";
-import { About, List, Seo } from "../components";
-import Link from "next/link";
+import type { GetStaticProps } from 'next';
+import { getSortedPostsData } from '../lib/post';
+import { PostType } from '../types';
+import styles from '../styles/Home.module.scss';
+import { About, List, Seo } from '../components';
+import Link from 'next/link';
 
 interface HomeProps {
   homePostData: Array<PostType>;

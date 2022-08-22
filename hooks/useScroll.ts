@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const useScroll = () => {
   const [scroll, setScroll] = useState(0);
@@ -6,9 +6,9 @@ export const useScroll = () => {
 
   useEffect(() => {
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return scroll;

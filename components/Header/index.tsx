@@ -1,19 +1,19 @@
-import styles from "./Header.module.scss";
-import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import Git from "../../public/svg/github.svg";
+import styles from './Header.module.scss';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
+import Git from '../../public/svg/github.svg';
 
 export const Header = () => {
   const router = useRouter();
   const menu = [
-    { href: "/", name: "Home" },
-    { href: "/posts", name: "Posts" },
+    { href: '/', name: 'Home' },
+    { href: '/posts', name: 'Posts' },
   ];
   return (
     <header className={styles.root}>
-      <Link href={"/"}>
+      <Link href={'/'}>
         <a>
           <h1>Sua Blog</h1>
         </a>
@@ -24,7 +24,7 @@ export const Header = () => {
             {menu.map(({ href, name }) => (
               <li
                 key={name}
-                className={router.pathname === href ? styles.active : ""}
+                className={router.pathname === href ? styles.active : ''}
               >
                 <Link href={href}>
                   <a>{name}</a>

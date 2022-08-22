@@ -1,8 +1,8 @@
-import { PostType } from "../../types";
-import { getSortedPostsData } from "../../lib/post";
-import { List, Seo } from "../../components";
-import { GetStaticProps } from "next";
-import styles from "../../styles/Posts.module.scss";
+import { PostType } from '../../types';
+import { getSortedPostsData } from '../../lib/post';
+import { List, Seo } from '../../components';
+import { GetStaticProps } from 'next';
+import styles from '../../styles/Posts.module.scss';
 
 interface PostsProps {
   allPostData: Array<PostType>;

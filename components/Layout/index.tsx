@@ -1,6 +1,6 @@
-import React from "react";
-import { GoTop } from "../GoTop";
-import { Header } from "../Header";
+import React from 'react';
+import { GoTop } from '../GoTop';
+import { Header } from '../Header';
 
 type AppLayoutProps = {
   children: React.ReactNode;

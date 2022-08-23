@@ -22,6 +22,8 @@
   }
   p {
     font-size: 1rem;
+    white-space: pre-wrap;
+    line-height: 1.4;
   }
   ul {
     padding-left: 24px;
@@ -54,6 +56,7 @@
     font-family: 'Source Code Pro', monospace;
     font-size: 14px;
     color: rgb(214, 222, 235);
+    // color: initial;
     white-space: pre-wrap;
   }
   img {

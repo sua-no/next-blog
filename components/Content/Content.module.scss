@@ -25,12 +25,18 @@
     white-space: pre-wrap;
     line-height: 1.4;
   }
+  a {
+    color: $primary-color;
+  }
   ul {
     padding-left: 24px;
+    li {
+      list-style-type: disc;
+    }
   }
   li {
-    list-style-type: disc;
     margin-bottom: 10px;
+    list-style: auto;
   }
   blockquote {
     position: relative;
@@ -56,7 +62,7 @@
     font-family: 'Source Code Pro', monospace;
     font-size: 14px;
     color: rgb(214, 222, 235);
-    // color: initial;
+    color: #e6e0cc;
     white-space: pre-wrap;
   }
   img {

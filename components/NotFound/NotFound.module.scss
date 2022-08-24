@@ -1,0 +1,17 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 300px);
+  min-height: 210px;
+  > span {
+    width: 80px;
+    @media screen and (max-width: 720px) {
+      width: 50px;
+    }
+  }
+  div {
+    font-size: 1.4rem;
+  }
+}

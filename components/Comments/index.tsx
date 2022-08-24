@@ -1,6 +1,6 @@
 import styles from './Comments.module.scss';
 
-const Comments = () => {
+export const Comments = () => {
   return (
     <section
       className={styles.root}
@@ -21,5 +21,3 @@ const Comments = () => {
     />
   );
 };
-
-export default Comments;

@@ -1,13 +1,23 @@
+import { useEffect } from 'react';
+import hljs from 'highlight.js/lib/common';
+import 'highlight.js/styles/tokyo-night-dark.css';
+import javascript from 'highlight.js/lib/languages/javascript';
+
 import { PostType } from '../../types';
 import { getAllPostIds, getPostData } from '../../lib/post';
-import { Content, Seo } from '../../components';
-import Comments from '../../components/Comments';
+import { Content, Seo, Comments } from '../../components';
+
+hljs.registerLanguage('javascript', javascript);
 
 interface PostProps {
   postData: PostType;
 }
 
 const Post = ({ postData }: PostProps) => {
+  useEffect(() => {
+    hljs.initHighlighting();
+  }, []);
+
   return (
     <>
       <Seo title={postData.title ?? ''} />

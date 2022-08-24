@@ -1,6 +1,7 @@
 import { PostType } from '../../types';
 import { getAllPostIds, getPostData } from '../../lib/post';
 import { Content, Seo } from '../../components';
+import Comments from '../../components/Comments';
 
 interface PostProps {
   postData: PostType;
@@ -11,6 +12,7 @@ const Post = ({ postData }: PostProps) => {
     <>
       <Seo title={postData.title ?? ''} />
       <Content {...postData} />
+      <Comments />
     </>
   );
 };

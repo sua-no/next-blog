@@ -9,6 +9,7 @@
   width: 32px;
   height: 32px;
   cursor: pointer;
+  z-index: 1;
   @include transition();
   @media screen and (max-width: 960px) {
     right: 24px;

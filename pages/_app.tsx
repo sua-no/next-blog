@@ -1,26 +1,12 @@
-import { useEffect } from 'react';
 import '../styles/global.scss';
 import type { AppProps } from 'next/app';
 import { NextSeo } from 'next-seo';
 import Script from 'next/script';
-import { useRouter } from 'next/router';
 
 import { Layout } from '../components';
 import nextSeoConfig from '../next-seo.config';
-import { gtmVirtualPageView } from '../lib/ga';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter();
-
-  useEffect(() => {
-    const mainDataLayer = {
-      pageTypeName: pageProps.page || null,
-      url: router.pathname,
-    };
-
-    gtmVirtualPageView(mainDataLayer);
-  }, [pageProps]);
-
   return (
     <>
       <NextSeo {...nextSeoConfig} />

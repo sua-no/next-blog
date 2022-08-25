@@ -1,7 +1,12 @@
-import { NotFound } from '../components';
+import { NotFound, Seo } from '../components';
 
 const NotFoundPage = () => {
-  return <NotFound />;
+  return (
+    <>
+      <Seo title={'404'} />
+      <NotFound />
+    </>
+  );
 };
 
 export default NotFoundPage;

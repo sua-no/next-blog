@@ -27,6 +27,7 @@
     line-height: 1.6;
   }
   a {
+    word-break: break-all;
     font-size: inherit;
     line-height: inherit;
     color: $primary-color;

@@ -25,6 +25,9 @@
     font-size: 1rem;
     white-space: pre-wrap;
     line-height: 1.6;
+    code {
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
   a {
     word-break: break-all;

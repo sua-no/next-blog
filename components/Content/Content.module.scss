@@ -25,9 +25,6 @@
     font-size: 1rem;
     white-space: pre-wrap;
     line-height: 1.6;
-    code {
-      background: rgba(255, 255, 255, 0.1);
-    }
   }
   a {
     word-break: break-all;
@@ -76,6 +73,18 @@
     @media screen and (max-width: 720px) {
       max-width: 100%;
     }
+  }
+}
+.day {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  p,
+  strong,
+  li {
+    color: $text-color-day;
   }
 }
 .title {

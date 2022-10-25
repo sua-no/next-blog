@@ -4,6 +4,7 @@ import type { AppProps } from 'next/app';
 import { NextSeo } from 'next-seo';
 import Script from 'next/script';
 import { useRouter } from 'next/router';
+import { RecoilRoot } from 'recoil';
 
 import { Layout } from '../components';
 import nextSeoConfig from '../next-seo.config';
@@ -33,9 +34,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         })(window,document,'script','dataLayer','G-XG21G490C4');
       `}
       </Script>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <RecoilRoot>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </RecoilRoot>
     </>
   );
 }

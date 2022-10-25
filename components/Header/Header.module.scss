@@ -30,15 +30,17 @@
           color: $text-second-color;
           font-size: 1.2rem;
         }
-        &.active {
-          a {
-            color: $title-color;
-          }
-        }
       }
     }
     a {
       font-size: 1.4rem;
+    }
+  }
+  .rights {
+    display: flex;
+    align-items: center;
+    button {
+      margin-right: 12px;
     }
   }
 }

@@ -1,11 +1,15 @@
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useRecoilValue } from 'recoil';
+
 import { useScroll } from '../../hooks/useScroll';
 import styles from './GoTop.module.scss';
 import Top from '../../public/svg/arrow.svg';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
+import { modeState } from '../../states';
 
 export const GoTop = () => {
   const scroll = useScroll();
+  const modeStateValue = useRecoilValue(modeState);
   const [progress, setProgress] = useState(0);
   const size = 32;
   const strokeWidth = 1.8;
@@ -31,8 +35,7 @@ export const GoTop = () => {
       style={{
         visibility: scroll > 0 ? 'visible' : 'hidden',
         opacity: scroll > 0 ? 1 : 0,
-      }}
-    >
+      }}>
       <div className={styles.progress}>
         <svg>
           <defs>
@@ -43,7 +46,7 @@ export const GoTop = () => {
           </defs>
           <circle
             fill="none"
-            stroke="#2d3748"
+            stroke={modeStateValue == 'night' ? '#2d3748' : '#c1ccde'}
             cx={size / 2}
             cy={size / 2}
             r={(size - strokeWidth) / 2}
@@ -52,7 +55,7 @@ export const GoTop = () => {
           <circle
             className={styles.progressBar}
             fill="none"
-            stroke="#2d3748"
+            stroke={modeStateValue == 'night' ? '#2d3748' : '#c1ccde'}
             cx={size / 2}
             cy={size / 2}
             r={(size - strokeWidth) / 2}

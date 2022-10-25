@@ -5,3 +5,4 @@ export * from './Content';
 export * from './About';
 export * from './Comments';
 export * from './NotFound';
+export * from './ModeIcon';

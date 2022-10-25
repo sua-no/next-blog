@@ -2,6 +2,7 @@
 @import './reset.scss';
 
 * {
+  @include transition();
   color: $text-color;
 }
 
@@ -9,6 +10,28 @@ main {
   background: $bg-color;
   min-height: 100vh;
   padding: 0 24px;
+  nav ul li.active a {
+    color: $title-color;
+  }
+  &.day {
+    background: $bg-color-day;
+    h1,
+    h2 {
+      color: $bg-color;
+    }
+    nav ul li a {
+      color: $text-color;
+    }
+    nav ul li.active a {
+      color: $bg-color;
+    }
+    .wrapper div section div p {
+      color: $text-color-day;
+    }
+    .wrapper section ul li a div:first-child {
+      color: $text-color-day;
+    }
+  }
 }
 
 .wrapper {
@@ -22,9 +45,20 @@ main {
 
 a {
   font-weight: 200;
-  @include transition();
   &:hover {
     color: $title-color;
     text-decoration: underline;
   }
+}
+
+.icon-wrapper {
+  width: 30px;
+  height: 30px;
+}
+
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }

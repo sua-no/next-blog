@@ -20,10 +20,11 @@ main {
       color: $bg-color;
     }
     nav ul li a {
-      color: $text-color;
+      color: $text-color-day;
     }
     nav ul li.active a {
       color: $bg-color;
+      font-weight: 400;
     }
     .wrapper div section div p {
       color: $text-color-day;
